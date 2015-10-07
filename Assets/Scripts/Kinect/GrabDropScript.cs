@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class GrabDropScript : MonoBehaviour 
-{
+public class GrabDropScript : SingletonMono<GrabDropScript> {
 	[Tooltip("List of the objects that may be dragged and dropped.")]
 	public GameObject[] draggableObjects;
 
