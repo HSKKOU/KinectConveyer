@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TrashManager : MonoBehaviour {
+public class TrashManager : SingletonMono<TrashManager> {
 
 	// Use this for initialization
 	void Start () {

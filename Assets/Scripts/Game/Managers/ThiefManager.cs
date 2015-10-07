@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ThiefManager : MonoBehaviour {
+public class ThiefManager : SingletonMono<ThiefManager> {
 
 	// Use this for initialization
 	void Start () {

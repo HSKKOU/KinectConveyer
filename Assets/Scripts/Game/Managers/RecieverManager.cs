@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RecieverManager : MonoBehaviour {
+public class RecieverManager : SingletonMono<RecieverManager> {
 
 	// Use this for initialization
 	void Start () {

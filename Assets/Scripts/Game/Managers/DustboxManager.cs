@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DustboxManager : MonoBehaviour {
+public class DustboxManager : SingletonMono<DustboxManager> {
 
 	// Use this for initialization
 	void Start () {
