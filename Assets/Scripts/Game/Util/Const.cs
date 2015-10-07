@@ -6,5 +6,6 @@
 		// Tag
 		public const string CONVEYER_TAG = "Conveyer";
 		public const string RECIEVER_TAG = "Reciever";
+		public const string FRUIT_TAG = "Fruit";
 	}
 }

@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class ThiefManager : SingletonMono<ThiefManager> {
-
-	// Use this for initialization
-	void Start () {
 	
+	private ThiefController thiefController;
+		
+	public void Initialize() {
+		this.thiefController = this.GetComponent<ThiefController>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void SteelFruit() {
+		this.thiefController.SteelFruit();
 	}
 }

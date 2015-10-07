@@ -37,6 +37,7 @@ public class GameManager : SingletonMono<GameManager> {
 		
 		conveyerManager.Initialize();
 		fruitsManager.Initialize();
+		thiefManager.Initialize();
 	}
 	
 	// Update is called once per frame
