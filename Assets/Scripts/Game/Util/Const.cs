@@ -1,5 +1,8 @@
-﻿namespace Const {
+﻿namespace Constants {
 	public static class Const {
-		public static readonly int a = 0;
+		// Conveyer
+		public const float DEFAULT_CONVEYER_SPEED = 1.0f;
+		
+		
 	}
 }
