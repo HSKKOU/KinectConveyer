@@ -35,10 +35,21 @@ public class FruitController : MonoBehaviour {
 	
 	// Collisions
 	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.tag != Const.CONVEYER_TAG) {
-			return;
+		if (other.gameObject.tag == Const.CONVEYER_TAG) {
+			this.ChangeState(FruitState.Carried);
+		} else if (other.gameObject.tag == Const.RECIEVER_TAG) {
+			this.ChangeState(FruitState.Stand);
 		}
-		this.ChangeState(FruitState.Carried);
+	}
+	
+	
+	// Kinect Interaction
+	public void OnGrabbedKinect() {
+		this.ChangeState(FruitState.Grabbed);
+	}
+	
+	public void OnReleasedKinect() {
+		this.ChangeState(FruitState.Released);
 	}
 	
 	
