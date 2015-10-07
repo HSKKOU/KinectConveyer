@@ -12,7 +12,7 @@ public class ConveyerManager : SingletonMono<ConveyerManager> {
 
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	
 	public void Initialize() {
@@ -23,5 +23,9 @@ public class ConveyerManager : SingletonMono<ConveyerManager> {
 	
 	public void SpeedUp() {
 		
+	}
+	
+	public void StopConveyer() {
+		this.conveyerController.StopConveyer();
 	}
 }

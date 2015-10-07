@@ -7,13 +7,12 @@ public class ConveyerController : SingletonMono<ConveyerController> {
   public float getConveyerSpeed(){return this.conveyerSpeed;}
   public void setConveyerSpeed(float cs){this.conveyerSpeed = cs;}
 
-  // Use this for initialization
-  void Start() {
-      
-  }
-
   // Update is called once per frame
   void Update() {
 
+  }
+  
+  public void StopConveyer() {
+    this.conveyerSpeed = 0.0f;
   }
 }

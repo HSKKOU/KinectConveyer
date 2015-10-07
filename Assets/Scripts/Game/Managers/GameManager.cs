@@ -6,7 +6,6 @@ public class GameManager : SingletonMono<GameManager> {
 	public enum GameState {
 		Init,
 		Title,
-		Start,
 		Playing,
 		GameOver,
 		Result,
@@ -37,11 +36,24 @@ public class GameManager : SingletonMono<GameManager> {
 		
 		conveyerManager.Initialize();
 		fruitsManager.Initialize();
+		scoreManager.Initialize();
 		thiefManager.Initialize();
+		timerManager.Initialize();
+		
+		this.GameStart();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+	
+	public void GameStart() {
+		this.gameState = GameState.Playing;
+	}
+	
+	public void GameOver() {
+		this.gameState = GameState.GameOver;
+		this.conveyerManager.StopConveyer();
 	}
 }
