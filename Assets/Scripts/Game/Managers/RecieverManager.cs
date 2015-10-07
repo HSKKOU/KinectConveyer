@@ -3,9 +3,8 @@ using System.Collections;
 
 public class RecieverManager : SingletonMono<RecieverManager> {
 
-	// Use this for initialization
-	void Start () {
-	
+	public void Initialize() {
+		
 	}
 	
 	// Update is called once per frame

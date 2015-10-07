@@ -9,6 +9,7 @@
 		public const string FRUIT_TAG = "Fruit";
 		
 		// Timer 
-		public const float DEFAULT_INIT_TIME = 3.0f;
+		public const float DEFAULT_INIT_TIME = 100.0f;
+		public const float STEEL_MINUS_TIME = 5.0f;
 	}
 }

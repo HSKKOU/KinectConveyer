@@ -37,6 +37,7 @@ public class GameManager : SingletonMono<GameManager> {
 		conveyerManager.Initialize();
 		fruitsManager.Initialize();
 		scoreManager.Initialize();
+		recieverManager.Initialize();
 		thiefManager.Initialize();
 		timerManager.Initialize();
 		

@@ -29,10 +29,17 @@ public class TimerManager : SingletonMono<TimerManager> {
 	
 	private void UpdateTime() {
 			this.currentTime += Time.deltaTime;
+			float rtime = 0.0f;
 			if(this.restTime <= this.currentTime) {
 				this.TimeOver();
+			} else {
+				rtime = this.restTime - Mathf.Floor(this.currentTime);
 			}
-			this.timerText.text = "" + (this.restTime - Mathf.Floor(this.currentTime));
+			this.timerText.text = "" + rtime;
+	}
+	
+	public void Minus(float num) {
+		this.currentTime += num;
 	}
 	
 	private void TimeOver() {
