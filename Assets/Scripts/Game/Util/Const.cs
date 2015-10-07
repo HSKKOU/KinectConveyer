@@ -1,8 +1,9 @@
 ﻿namespace Constants {
 	public static class Const {
 		// Conveyer
-		public const float DEFAULT_CONVEYER_SPEED = 1.0f;
+		public const float DEFAULT_CONVEYER_SPEED = 0.1f;
 		
-		
+		// Tag
+		public const string CONVEYER_TAG = "Conveyer";
 	}
 }
