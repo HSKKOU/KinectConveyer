@@ -11,11 +11,6 @@ public class ThiefController : MonoBehaviour {
 		this.handImage.SetActive(false);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
 	public void SteelFruit(){
 		this.handImage.SetActive(true);
 		StartCoroutine("HideHand");
