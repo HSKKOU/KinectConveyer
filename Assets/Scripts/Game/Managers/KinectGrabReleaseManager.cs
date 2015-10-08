@@ -99,6 +99,10 @@ public class KinectGrabReleaseManager : SingletonMono<KinectGrabReleaseManager> 
         screenPixelPos.x = (int)(screenNormalPos.x * Camera.main.pixelWidth);
         screenPixelPos.y = (int)(screenNormalPos.y * Camera.main.pixelHeight);
 
+        if (screenPixelPos.y < Camera.main.pixelHeight / 4) {
+          screenPixelPos.y = Camera.main.pixelHeight / 4;
+        }
+
         Vector2 newObjectPos = Camera.main.ScreenToWorldPoint(screenPixelPos) - draggedObjectOffset;
         draggedObject.transform.position = Vector3.Lerp(draggedObject.transform.position, newObjectPos, dragSpeed * Time.deltaTime);
 

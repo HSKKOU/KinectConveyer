@@ -26,14 +26,30 @@ public class FruitsManager : SingletonMono<FruitsManager> {
 	private Vector3 emitterPosition;
 	
 	public void Initialize() {
+    this.DestroyAllFruits();
+
     this.gameManager = GameManager.Instance;
     this.kinectGrabReleaseManager = KinectGrabReleaseManager.Instance;
+    this.fruitDropTime = Const.FRUIT_DROP_SPAN[0];
+    this.fruitsList = Const.FRUITS_LEVEL[0];
 		this.currentTime = 0.0f;
 		this.SetNextFruit();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+  private void DestroyAllFruits() {
+    GameObject[] gos = GameObject.FindGameObjectsWithTag(Const.FRUIT_TAG);
+    foreach(GameObject g in gos) {
+      Destroy(g);
+    }
+    gos = GameObject.FindGameObjectsWithTag(Const.GRABBED_FRUIT_TAG);
+    foreach (GameObject g in gos)
+    {
+      Destroy(g);
+    }
+  }
+
+  // Update is called once per frame
+  void Update () {
     if(this.gameManager.getGameState() != GameManager.GameState.Playing) {
       return;
     }

@@ -35,22 +35,29 @@ public class GameManager : SingletonMono<GameManager> {
 		trashManager = TrashManager.Instance;
     guiManager = GUIManager.Instance;
     bascketHitManager = BascketHitManager.Instance;
-		
-		conveyerManager.Initialize();
-		fruitsManager.Initialize();
-		scoreManager.Initialize();
-		thiefManager.Initialize();
-		timerManager.Initialize();
-    guiManager.Initialize();
-    bascketHitManager.Initialize();
-		
-//		this.GameStart();
+
+    this.InitializeAll();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+  private void InitializeAll() {
+    this.gameState = GameState.Init;
+    conveyerManager.Initialize();
+    fruitsManager.Initialize();
+    scoreManager.Initialize();
+    thiefManager.Initialize();
+    timerManager.Initialize();
+    guiManager.Initialize();
+    bascketHitManager.Initialize();
+  }
+
+  public void Retry() {
+    this.InitializeAll();
+  }
 	
 	public void GameStart() {
     this.guiManager.HideTitle();
@@ -66,5 +73,6 @@ public class GameManager : SingletonMono<GameManager> {
 	public void GameOver() {
 		this.gameState = GameState.GameOver;
 		this.conveyerManager.StopConveyer();
+    this.scoreManager.ShowResult();
 	}
 }

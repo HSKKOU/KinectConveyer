@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DustboxController : MonoBehaviour {
+public class TextStreamer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
