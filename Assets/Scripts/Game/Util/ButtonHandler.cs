@@ -10,4 +10,12 @@ public class ButtonHandler : MonoBehaviour {
   public void OnRetry() {
     GameManager.Instance.Retry();
   }
+
+  public void OnTutorial() {
+    GameManager.Instance.Tutorial();
+  }
+
+  public void NextTutorial() {
+    TutorialManager.Instance.NextTutorial();
+  }
 }

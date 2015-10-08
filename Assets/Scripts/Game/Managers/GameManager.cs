@@ -15,25 +15,23 @@ public class GameManager : SingletonMono<GameManager> {
 	public GameState getGameState(){return this.gameState;}
 	
 	private ConveyerManager conveyerManager;
-	private DustboxManager dustboxManager;
 	private FruitsManager fruitsManager;
 	private ScoreManager scoreManager;
 	private ThiefManager thiefManager;
 	private TimerManager timerManager;
-	private TrashManager trashManager;
   private GUIManager guiManager;
+  private TutorialManager tutorialManager;
   private BascketHitManager bascketHitManager;
 
 	// Use this for initialization
 	void Start () {
 		conveyerManager = ConveyerManager.Instance;
-		dustboxManager = DustboxManager.Instance;
 		fruitsManager = FruitsManager.Instance;
 		scoreManager = ScoreManager.Instance;
 		thiefManager = ThiefManager.Instance;
 		timerManager = TimerManager.Instance;
-		trashManager = TrashManager.Instance;
     guiManager = GUIManager.Instance;
+    tutorialManager = TutorialManager.Instance;
     bascketHitManager = BascketHitManager.Instance;
 
     this.InitializeAll();
@@ -52,11 +50,16 @@ public class GameManager : SingletonMono<GameManager> {
     thiefManager.Initialize();
     timerManager.Initialize();
     guiManager.Initialize();
+    tutorialManager.Initialize();
     bascketHitManager.Initialize();
   }
 
   public void Retry() {
     this.InitializeAll();
+  }
+
+  public void Tutorial() {
+    tutorialManager.ShowTutorial();
   }
 	
 	public void GameStart() {
