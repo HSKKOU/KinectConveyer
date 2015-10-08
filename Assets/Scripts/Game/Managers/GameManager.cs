@@ -57,6 +57,11 @@ public class GameManager : SingletonMono<GameManager> {
 		this.gameState = GameState.Playing;
     this.fruitsManager.InitialAction();
 	}
+
+  public void LevelUp(int levelNum) {
+    this.fruitsManager.LevelUp(levelNum);
+    this.conveyerManager.LevelUp(levelNum);
+  }
 	
 	public void GameOver() {
 		this.gameState = GameState.GameOver;

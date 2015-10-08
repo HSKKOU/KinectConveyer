@@ -34,9 +34,18 @@ public class TimerManager : SingletonMono<TimerManager> {
 				this.TimeOver();
 			} else {
 				rtime = this.restTime - Mathf.Floor(this.currentTime);
+      this.UpdateLevel(rtime);
 			}
 			this.timerText.text = "" + rtime;
 	}
+
+  public void UpdateLevel(float rest) {
+    if (rest <= Const.TIME_CHANGE_LEVEL_2 && rest > Const.TIME_CHANGE_LEVEL_3) {
+      this.gameManager.LevelUp(2);
+    } else if (rest <= Const.TIME_CHANGE_LEVEL_3) {
+      this.gameManager.LevelUp(3);
+    }
+  }
 	
 	public void Minus(float num) {
 		this.currentTime += num;

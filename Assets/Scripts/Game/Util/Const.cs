@@ -5,10 +5,10 @@
     public const int MAX_LEVEL = 3;
 
     // Conveyer
-    public static float[] CONVEYER_SPEED = { 0.02f, 0.04f, 0.06f };
+    public static float[] CONVEYER_SPEED = { 0.02f, 0.025f, 0.03f };
 
     // Fruit Drop span
-    public static float[] FRUIT_DROP_SPAN = { 4.0f, 3.0f, 2.0f };
+    public static float[] FRUIT_DROP_SPAN = { 4.0f, 3.2f, 2.6667f };
 
     // Fruit num
     public const int APPLE_NUM = 0;
@@ -36,5 +36,7 @@
     // Timer 
     public const float DEFAULT_INIT_TIME = 100.0f;
 		public const float STEEL_MINUS_TIME = 5.0f;
-	}
+    public const float TIME_CHANGE_LEVEL_2 = 70.0f;
+    public const float TIME_CHANGE_LEVEL_3 = 40.0f;
+  }
 }
