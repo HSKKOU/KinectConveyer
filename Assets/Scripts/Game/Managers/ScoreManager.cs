@@ -19,8 +19,12 @@ public class ScoreManager : SingletonMono<ScoreManager> {
 	}
 	
 	public void Plus(int num) {
-		this.score += num;
-		this.UpdateScore();
+    if (this.score + num < 0) {
+      this.score = 0;
+    } else {
+      this.score += num;
+    }
+    this.UpdateScore();
 	}
 	
 	public void Minus(int num) {

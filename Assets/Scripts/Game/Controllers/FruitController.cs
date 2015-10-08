@@ -15,6 +15,10 @@ public class FruitController : MonoBehaviour {
 	}
   [SerializeField]
 	private FruitState fruitState = FruitState.Dropped;
+
+  [SerializeField]
+  private string fruitName;
+  public string getFruitName(){ return this.fruitName; }
 	
 	private ConveyerController conveyerController;
   private FruitsManager fruitsManager;
@@ -60,6 +64,7 @@ public class FruitController : MonoBehaviour {
 	}
 	
 	public void OnReleasedKinect() {
+    this.gameObject.tag = Const.RELEASED_FRUIT_TAG;
     this.GetComponent<Rigidbody2D>().isKinematic = false;
     this.ChangeState(FruitState.Released);
 	}

@@ -18,11 +18,11 @@ public class GameManager : SingletonMono<GameManager> {
 	private DustboxManager dustboxManager;
 	private FruitsManager fruitsManager;
 	private ScoreManager scoreManager;
-	private RecieverManager recieverManager;
 	private ThiefManager thiefManager;
 	private TimerManager timerManager;
 	private TrashManager trashManager;
   private GUIManager guiManager;
+  private BascketHitManager bascketHitManager;
 
 	// Use this for initialization
 	void Start () {
@@ -30,19 +30,19 @@ public class GameManager : SingletonMono<GameManager> {
 		dustboxManager = DustboxManager.Instance;
 		fruitsManager = FruitsManager.Instance;
 		scoreManager = ScoreManager.Instance;
-		recieverManager = RecieverManager.Instance;
 		thiefManager = ThiefManager.Instance;
 		timerManager = TimerManager.Instance;
 		trashManager = TrashManager.Instance;
     guiManager = GUIManager.Instance;
+    bascketHitManager = BascketHitManager.Instance;
 		
 		conveyerManager.Initialize();
 		fruitsManager.Initialize();
 		scoreManager.Initialize();
-		recieverManager.Initialize();
 		thiefManager.Initialize();
 		timerManager.Initialize();
     guiManager.Initialize();
+    bascketHitManager.Initialize();
 		
 //		this.GameStart();
 	}
