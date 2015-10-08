@@ -1,0 +1,28 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) Iris(TM) Graphics 5100 (ID=0xa2e)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\OpenCvSharp.dll (this message is harmless)
+Loading C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\OpenCvSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\ICSharpCode.SharpZipLib.dll (this message is harmless)
+Loading C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\ICSharpCode.SharpZipLib.dll into Unity Child Domain
+Platform assembly: C:\Users\hskk\Documents\Unity\KinectConveyer\ClassfyFruits_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.049 seconds
+desktop: 1680x1050 60Hz; virtual: 3600x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.

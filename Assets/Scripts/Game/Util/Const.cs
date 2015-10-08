@@ -5,7 +5,7 @@
     public const int MAX_LEVEL = 3;
 
     // Conveyer
-    public static float[] CONVEYER_SPEED = { 0.03f, 0.03f, 0.04f };
+    public static float[] CONVEYER_SPEED = { 0.04f, 0.04f, 0.05f };
 
     // Fruit Drop span
     public static float[] FRUIT_DROP_SPAN = { 2.8f, 2.4f, 2.4f };
