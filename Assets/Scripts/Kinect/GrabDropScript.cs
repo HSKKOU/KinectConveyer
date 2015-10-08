@@ -170,38 +170,5 @@ public class GrabDropScript : SingletonMono<GrabDropScript> {
 			draggableObjects[i].transform.position = initialObjPos[i];
 			draggableObjects[i].transform.rotation = initialObjRot[i];
 		}
-	}
-	
-	void OnGUI()
-	{
-		if(infoGuiText != null && manager != null && manager.IsInteractionInited())
-		{
-			string sInfo = string.Empty;
-			
-			long userID = manager.GetUserID();
-			if(userID != 0)
-			{
-				if(draggedObject != null)
-					sInfo = "Dragging the " + draggedObject.name + " around.";
-				else
-					sInfo = "Please grab and drag an object around.";
-			}
-			else
-			{
-				KinectManager kinectManager = KinectManager.Instance;
-
-				if(kinectManager && kinectManager.IsInitialized())
-				{
-					sInfo = "Waiting for Users...";
-				}
-				else
-				{
-					sInfo = "Kinect is not initialized. Check the log for details.";
-				}
-			}
-			
-			infoGuiText.GetComponent<GUIText>().text = sInfo;
-		}
-	}
-	
+	}	
 }
