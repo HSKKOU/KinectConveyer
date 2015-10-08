@@ -18,6 +18,7 @@ public class TutorialManager : SingletonMono<TutorialManager> {
   }
 
   public void ShowTutorial() {
+    TextStreamer.Instance.WriteFile("Show Tutorial\n");
     this.tutorialPanel.SetActive(true);
     tutorials[this.currentPage].SetActive(true);
     for (int i = 1; i < this.tutorials.Length; i++) {

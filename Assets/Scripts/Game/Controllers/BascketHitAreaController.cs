@@ -22,8 +22,10 @@ public class BascketHitAreaController : MonoBehaviour {
 
     FruitController fc = other.gameObject.GetComponent<FruitController>();
     if(fc.getFruitName() == this.fruitName) {
+      TextStreamer.Instance.WriteFile("BascketHitAreaController: SUCCESS, " + this.fruitName + "\n");
       this.bascketHitManager.GetFruit();
     } else {
+      TextStreamer.Instance.WriteFile("BascketHitAreaController: FAILED, " + this.fruitName + "\n");
       this.bascketHitManager.GetIncorrectFruit();
     }
 

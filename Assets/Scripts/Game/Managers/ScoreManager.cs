@@ -17,7 +17,9 @@ public class ScoreManager : SingletonMono<ScoreManager> {
 	private int score = 0;
 	public int getScore(){return this.score;}
 
-	public void Initialize() {
+  private int[] top3s = { 0, 0, 0 };
+
+  public void Initialize() {
     this.gameManager = GameManager.Instance;
     this.score = 0;
 		this.UpdateScore();
@@ -50,7 +52,23 @@ public class ScoreManager : SingletonMono<ScoreManager> {
 
   public void ShowResult() {
     this.resultText.text = this.score + "";
-    this.top3Text.text = "100\n100\n100\n";
+    TextStreamer.Instance.WriteFile("score: " + this.score);
+    this.UpdateHighScore();
+    this.top3Text.text = this.top3s[0] + "\n" + this.top3s[1] + "\n" + this.top3s[2] + "\n";
     GUIManager.Instance.ShowResult();
+  }
+
+  private void UpdateHighScore() {
+    for (int i=0; i<this.top3s.Length; i++) {
+      if (this.top3s[i] < this.score) {
+        int newScore = this.score;
+        for (int j= i; j<this.top3s.Length; j++) {
+          int tmp = this.top3s[j];
+          this.top3s[j] = newScore;
+          newScore = tmp;
+        }
+        break;
+      }
+    }
   }
 }

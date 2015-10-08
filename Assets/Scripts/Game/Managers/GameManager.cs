@@ -22,6 +22,7 @@ public class GameManager : SingletonMono<GameManager> {
   private GUIManager guiManager;
   private TutorialManager tutorialManager;
   private BascketHitManager bascketHitManager;
+  private TextStreamer textStreamer;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,7 @@ public class GameManager : SingletonMono<GameManager> {
     guiManager = GUIManager.Instance;
     tutorialManager = TutorialManager.Instance;
     bascketHitManager = BascketHitManager.Instance;
+    textStreamer = TextStreamer.Instance;
 
     this.InitializeAll();
 	}
@@ -52,6 +54,7 @@ public class GameManager : SingletonMono<GameManager> {
     guiManager.Initialize();
     tutorialManager.Initialize();
     bascketHitManager.Initialize();
+    textStreamer.Initialize();
   }
 
   public void Retry() {

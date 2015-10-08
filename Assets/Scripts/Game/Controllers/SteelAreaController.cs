@@ -13,7 +13,8 @@ public class SteelAreaController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == Const.FRUIT_TAG) {
-			this.thiefManager.SteelFruit(other.gameObject);
+      TextStreamer.Instance.WriteFile("SteelAreaController: Steeled \n");
+      this.thiefManager.SteelFruit(other.gameObject);
 		}
 	}
 }
