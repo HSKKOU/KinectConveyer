@@ -24,7 +24,7 @@ public class ScoreManager : SingletonMono<ScoreManager> {
 	}
 	
 	private void UpdateScore() {
-    if(this.gameManager.getGameState() != GameManager.GameState.Init || this.gameManager.getGameState() != GameManager.GameState.Playing) {
+    if(this.gameManager.getGameState() != GameManager.GameState.Init && this.gameManager.getGameState() != GameManager.GameState.Playing) {
       return;
     }
 		this.scoreText.text = "" + this.score;
