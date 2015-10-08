@@ -13,8 +13,9 @@ public class ThiefManager : SingletonMono<ThiefManager> {
 		this.timerManager = TimerManager.Instance;
 	}
 	
-	public void SteelFruit() {
+	public void SteelFruit(GameObject fruit) {
 		this.thiefController.SteelFruit();
+    fruit.GetComponent<FruitController>().Steeled();
 		this.timerManager.Minus(Const.STEEL_MINUS_TIME);
 	}
 }

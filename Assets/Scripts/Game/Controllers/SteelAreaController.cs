@@ -13,8 +13,7 @@ public class SteelAreaController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == Const.FRUIT_TAG) {
-			this.thiefManager.SteelFruit();
-			Destroy(other.gameObject);
+			this.thiefManager.SteelFruit(other.gameObject);
 		}
 	}
 }

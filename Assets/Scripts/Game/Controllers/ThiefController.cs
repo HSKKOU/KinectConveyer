@@ -18,7 +18,6 @@ public class ThiefController : MonoBehaviour {
 	
 	private IEnumerator HideHand() {
 		yield return new WaitForSeconds(0.5f);
-		Debug.Log("hide");
 		this.handImage.SetActive(false);
 	}
 }

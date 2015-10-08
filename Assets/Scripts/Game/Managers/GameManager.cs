@@ -22,6 +22,7 @@ public class GameManager : SingletonMono<GameManager> {
 	private ThiefManager thiefManager;
 	private TimerManager timerManager;
 	private TrashManager trashManager;
+  private GUIManager guiManager;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,7 @@ public class GameManager : SingletonMono<GameManager> {
 		thiefManager = ThiefManager.Instance;
 		timerManager = TimerManager.Instance;
 		trashManager = TrashManager.Instance;
+    guiManager = GUIManager.Instance;
 		
 		conveyerManager.Initialize();
 		fruitsManager.Initialize();
@@ -40,8 +42,9 @@ public class GameManager : SingletonMono<GameManager> {
 		recieverManager.Initialize();
 		thiefManager.Initialize();
 		timerManager.Initialize();
+    guiManager.Initialize();
 		
-		this.GameStart();
+//		this.GameStart();
 	}
 	
 	// Update is called once per frame
@@ -50,7 +53,9 @@ public class GameManager : SingletonMono<GameManager> {
 	}
 	
 	public void GameStart() {
+    this.guiManager.HideTitle();
 		this.gameState = GameState.Playing;
+    this.fruitsManager.InitialAction();
 	}
 	
 	public void GameOver() {

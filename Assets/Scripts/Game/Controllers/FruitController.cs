@@ -13,19 +13,27 @@ public class FruitController : MonoBehaviour {
 		Stand,
 		Num
 	}
+  [SerializeField]
 	private FruitState fruitState = FruitState.Dropped;
 	
 	private ConveyerController conveyerController;
+  private FruitsManager fruitsManager;
+
+  private SpriteRenderer spriteRendererOffset;
 	
 	public void Initialize() {
 		this.conveyerController = ConveyerController.Instance;
+    this.fruitsManager = FruitsManager.Instance;
+    this.spriteRendererOffset = this.gameObject.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(this.fruitState == FruitState.Carried) {
 			this.MoveByConveyer();
-		}
+		} else if(this.fruitState == FruitState.Grabbed) {
+
+    }
 	}
 	
 	private void MoveByConveyer() {
@@ -45,13 +53,23 @@ public class FruitController : MonoBehaviour {
 	
 	// Kinect Interaction
 	public void OnGrabbedKinect() {
+    this.gameObject.tag = Const.GRABBED_FRUIT_TAG;
+    this.gameObject.layer = Const.GRABBED_FRUIT_LAYER;
+    this.GetComponent<Rigidbody2D>().isKinematic = true;
 		this.ChangeState(FruitState.Grabbed);
 	}
 	
 	public void OnReleasedKinect() {
-		this.ChangeState(FruitState.Released);
+    this.GetComponent<Rigidbody2D>().isKinematic = false;
+    this.ChangeState(FruitState.Released);
 	}
-	
+
+
+  // Steel
+	public void Steeled() {
+    this.fruitsManager.SteeledFruit(this.gameObject);
+    Destroy(this.gameObject);
+  }
 	
 	// State Change
 	void ChangeState(FruitState fs) {
