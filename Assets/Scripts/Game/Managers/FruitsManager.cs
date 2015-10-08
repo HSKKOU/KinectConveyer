@@ -19,7 +19,8 @@ public class FruitsManager : SingletonMono<FruitsManager> {
 	private FruitManagerState fruitManagerState = FruitManagerState.Init;
 	
 	private float currentTime;
-	private float fruitDropTime = Const.FRUIT_DROP_SPAN_1;
+	private float fruitDropTime = Const.FRUIT_DROP_SPAN[0];
+  private int[] fruitsList = Const.FRUITS_LEVEL[0];
 
 	[SerializeField]
 	private Vector3 emitterPosition;
@@ -55,8 +56,8 @@ public class FruitsManager : SingletonMono<FruitsManager> {
 	}
 	
 	private void SetNextFruit() {
-		int random = Random.Range(0, fruitSamples.Length);
-		this.nextFruit = fruitSamples[random];
+		int random = Random.Range(0, fruitsList.Length);
+		this.nextFruit = fruitSamples[fruitsList[random]];
 	}
 
   public void SteeledFruit(GameObject fruit) {
@@ -64,11 +65,7 @@ public class FruitsManager : SingletonMono<FruitsManager> {
   }
 
   public void LevelUp(int levelNum) {
-    switch (levelNum) {
-      case 1: this.fruitDropTime = Const.FRUIT_DROP_SPAN_1; return;
-      case 2: this.fruitDropTime = Const.FRUIT_DROP_SPAN_2; return;
-      case 3: this.fruitDropTime = Const.FRUIT_DROP_SPAN_3; return;
-      default: return;
-    }
+    this.fruitDropTime = Const.FRUIT_DROP_SPAN[levelNum - 1];
+    this.fruitsList = Const.FRUITS_LEVEL[levelNum - 1];
   }
 }

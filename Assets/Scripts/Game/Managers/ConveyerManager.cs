@@ -7,7 +7,7 @@ public class ConveyerManager : SingletonMono<ConveyerManager> {
 	
 	private ConveyerController conveyerController;
 	
-	private float conveyerSpeed = Const.CONVEYER_SPEED_1;
+	private float conveyerSpeed = Const.CONVEYER_SPEED[0];
 	public float getConveyerSpeed(){return this.conveyerSpeed;}
 
 	// Update is called once per frame
@@ -17,7 +17,7 @@ public class ConveyerManager : SingletonMono<ConveyerManager> {
 	
 	public void Initialize() {
 		this.conveyerController = ConveyerController.Instance;
-		this.conveyerSpeed = Const.CONVEYER_SPEED_1;
+		this.conveyerSpeed = Const.CONVEYER_SPEED[0];
 		conveyerController.setConveyerSpeed(this.conveyerSpeed);
 	}
 	
@@ -29,15 +29,7 @@ public class ConveyerManager : SingletonMono<ConveyerManager> {
 		this.conveyerController.StopConveyer();
 	}
 
-  public void LevelUp(int levelNum)
-  {
-    switch (levelNum)
-    {
-      case 1: this.conveyerController.setConveyerSpeed(Const.CONVEYER_SPEED_1); return;
-      case 2: this.conveyerController.setConveyerSpeed(Const.CONVEYER_SPEED_2); return;
-      case 3: this.conveyerController.setConveyerSpeed(Const.CONVEYER_SPEED_3); return;
-      default: return;
-    }
+  public void LevelUp(int levelNum) {
+    this.conveyerController.setConveyerSpeed(Const.CONVEYER_SPEED[levelNum - 1]);
   }
-
 }

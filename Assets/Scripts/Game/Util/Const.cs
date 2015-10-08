@@ -5,14 +5,24 @@
     public const int MAX_LEVEL = 3;
 
     // Conveyer
-    public const float CONVEYER_SPEED_1 = 0.02f;
-		public const float CONVEYER_SPEED_2 = 0.04f;
-    public const float CONVEYER_SPEED_3 = 0.06f;
+    public static float[] CONVEYER_SPEED = { 0.02f, 0.04f, 0.06f };
 
     // Fruit Drop span
-    public const float FRUIT_DROP_SPAN_1 = 2.0f;
-    public const float FRUIT_DROP_SPAN_2 = 1.8f;
-    public const float FRUIT_DROP_SPAN_3 = 1.6f;
+    public static float[] FRUIT_DROP_SPAN = { 4.0f, 3.0f, 2.0f };
+
+    // Fruit num
+    public const int APPLE_NUM = 0;
+    public const int GRAPE_NUM = 1;
+    public const int LEMON_NUM = 2;
+    public const int MELON_NUM = 3;
+    public const int ORANGE_NUM = 4;
+
+    // Emitted Fruit List
+    public static int[][] FRUITS_LEVEL = {
+      new int[]{ APPLE_NUM, GRAPE_NUM },
+      new int[]{ APPLE_NUM, GRAPE_NUM, LEMON_NUM },
+      new int[]{ APPLE_NUM, GRAPE_NUM, LEMON_NUM, MELON_NUM, ORANGE_NUM }
+    };
 
     // Tag
     public const string CONVEYER_TAG = "Conveyer";
