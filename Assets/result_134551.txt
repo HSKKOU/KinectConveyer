@@ -1,0 +1,49 @@
+Show Tutorial
+
+BascketHitAreaController: FAILED, Lemon
+
+BascketHitAreaController: FAILED, Grape
+
+BascketHitAreaController: FAILED, Grape
+
+BascketHitAreaController: SUCCESS, Melon
+
+BascketHitAreaController: FAILED, Orange
+
+BascketHitAreaController: FAILED, Lemon
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: FAILED, Melon
+
+BascketHitAreaController: FAILED, Melon
+
+BascketHitAreaController: FAILED, Lemon
+
+BascketHitAreaController: FAILED, Lemon
+
+BascketHitAreaController: FAILED, Melon
+
+BascketHitAreaController: SUCCESS, Orange
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: SUCCESS, Orange
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: FAILED, Melon
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: FAILED, Orange
+
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: FAILED, Melon
+
+score: 150

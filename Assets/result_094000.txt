@@ -1,0 +1,10 @@
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Grape
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: FAILED, Apple
+

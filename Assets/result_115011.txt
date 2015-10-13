@@ -1,0 +1,37 @@
+BascketHitAreaController: SUCCESS, Melon
+
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: SUCCESS, Melon
+
+BascketHitAreaController: SUCCESS, Melon
+
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: SUCCESS, Melon
+
+BascketHitAreaController: SUCCESS, Melon
+
+BascketHitAreaController: SUCCESS, Melon
+
+BascketHitAreaController: FAILED, Melon
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+score: 830

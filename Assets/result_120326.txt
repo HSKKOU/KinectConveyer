@@ -1,0 +1,57 @@
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: FAILED, Lemon
+
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: FAILED, Melon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Orange
+
+BascketHitAreaController: FAILED, Melon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: FAILED, Lemon
+
+BascketHitAreaController: SUCCESS, Grape
+
+BascketHitAreaController: SUCCESS, Grape
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: FAILED, Melon
+
+BascketHitAreaController: FAILED, Lemon
+
+SteelAreaController: Steeled 
+
+score: 1360
+BascketHitAreaController: SUCCESS, Grape
+

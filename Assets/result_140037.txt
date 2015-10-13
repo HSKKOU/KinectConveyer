@@ -1,0 +1,43 @@
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: SUCCESS, Lemon
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: FAILED, Lemon
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: FAILED, Lemon
+
+SteelAreaController: Steeled 
+
+BascketHitAreaController: FAILED, Lemon
+
+BascketHitAreaController: FAILED, Grape
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: SUCCESS, Lemon
+
+BascketHitAreaController: FAILED, Lemon
+
+BascketHitAreaController: FAILED, Lemon
+
+score: 400
